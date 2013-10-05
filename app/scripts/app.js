@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('yeomanApp', [])
+angular.module('noteApp', [])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
