@@ -1,7 +1,11 @@
 <div class="col-md-12">
   <h1>Gestionnaire de notes</h1>
   <ul class="note">
-      <li ng-repeat="thing in awesomeThings">{{thing}}</li>
+      <li ng-repeat="note in notes">
+        <div class="title">{{note.title}}</span>
+        <div class="desc">{{note.desc}}</span>
+        <div class="date">{{note.date}}</span>
+      </li>
   </ul>
   <a href="#" class="btn btn-large"><i class="icon-plus"></i>Ajouter une note</a>
 </div>
