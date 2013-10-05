@@ -7,8 +7,6 @@ angular.module('yeomanApp')
         'title' : 'My first note',
         'desc' : 'Note text here',
         'date' : '08/09/2013'
-        
-      } 
+      }
     ];
-    $scope.awesome
-  })
+  });

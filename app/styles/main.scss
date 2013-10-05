@@ -14,22 +14,39 @@ body {
     color: #333;
 }
 
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
-}
-
-.hero-unit h1 {
-    font-size: 60px;
+h1 {
+    color: #1c5c76;
+    font-size: 2em;
     line-height: 1;
     letter-spacing: -1px;
 }
-.test {
+
+ul.notes {
+  margin: 0;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  padding: 0;
   
+  li.note {
+    background-color: #ffffcc;
+    clear: both;
+    list-style-type: none;
+    padding: 1em;
+    @include box-shadow(0 0 2px rgba(0,0,0,0.3));
+    .inner {
+      border-left: 1px solid #fce3b0;
+      margin-left: 33px;
+      padding-left: 15px;
+    }
+    .date {
+      color: #1c5c76;
+    }
+    p.desc {
+      margin: 10px 0 10px;
+    }
+  }
+}
+button {
+  clear: both;
+  margin-top: 2em;
 }

@@ -1,11 +1,16 @@
 <div class="col-md-12">
   <h1>Gestionnaire de notes</h1>
-  <ul class="note">
-      <li ng-repeat="note in notes">
-        <div class="title">{{note.title}}</span>
-        <div class="desc">{{note.desc}}</span>
-        <div class="date">{{note.date}}</span>
+  <ul class="notes">
+      <li class="col-md-5 clear-fix note" ng-repeat="note in notes">
+        <div class="inner">
+          <h3 class="title">{{note.title}}</h3>
+          <div class="date">{{note.date}}</div>
+          <p class="desc">{{note.desc}}</p>
+        </div>
       </li>
   </ul>
-  <a href="#" class="btn btn-large"><i class="icon-plus"></i>Ajouter une note</a>
+  <button type="button" class="col-md-5 btn btn-lg btn-default">
+    <i class="icon-white icon-heart"></i>
+    Ajouter une note
+  </button>
 </div>
