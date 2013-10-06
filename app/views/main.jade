@@ -1,0 +1,19 @@
+.col-md-12
+    h1 Gestionnaire de notes
+    ul.notes
+      
+      li.col-md-5.clear-fix.note
+        .inner
+          form#note-form(ng-submit='addNote()')
+            input#new-note(type='text', placeholder='Title', autofocus='autofocus', class='form-control', ng-model='newNote.title', )
+            textarea#new-note(placeholder='Description', ng-model='newNote.desc', autofocus='autofocus', class='form-control')
+            input#new-note(type='hidden', placeholder='Date', ng-model='newNote.date', autofocus='autofocus', class='form-control')
+      
+      li.col-md-5.clear-fix.note(ng-repeat='note in notes')
+        .inner
+          h3.title {{note.title}}
+          .date {{note.date}}
+          p.desc {{note.desc}}
+    
+    button.col-md-5.btn.btn-lg.btn-default(type='button', ng-click='addNote()')
+      | Ajouter une note

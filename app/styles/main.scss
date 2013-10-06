@@ -2,6 +2,7 @@ $iconSpritePath: "../images/glyphicons-halflings.png";
 $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
 @import "bootstrap-sass/lib/bootstrap";
+@import "vars";
 
 html, body {
   margin: 20px;
@@ -20,16 +21,33 @@ h1 {
     letter-spacing: -1px;
 }
 
+
+
 ul.notes {
   margin: 0;
   margin-bottom: 2em;
   margin-top: 2em;
   padding: 0;
   
+  form {
+    input, 
+    textarea {
+      background-color: $yellow;
+      margin-bottom: 1em;
+      &:focus {
+        background-color: white;
+      }
+    }
+    textarea {
+      height: 100px;
+    }
+  }
+  
   li.note {
-    background-color: #ffffcc;
+    background-color: $yellow;
     clear: both;
     list-style-type: none;
+    margin-bottom: 2em;
     padding: 1em;
     @include box-shadow(0 0 2px rgba(0,0,0,0.3));
     .inner {

@@ -1,24 +1,23 @@
+
 <div class="col-md-12">
   <h1>Gestionnaire de notes</h1>
   <ul class="notes">
-      <li class="col-md-5 clear-fix note">
+    <li class="col-md-5 clear-fix note">
+      <div class="inner">
         <form id="note-form" ng-submit="addNote()">
-    		  <input id="new-note" placeholder="Title" ng-model="newNoteTitle" autofocus> {{newNoteTitle}}
-    		  <textarea id="new-note" placeholder="Description" ng-model="newNoteDesc" autofocus> 
-          </textarea>
-    		  <input id="new-note" placeholder="Date" ng-model="newNoteDate" autofocus> {{newNoteDate}}
-    	  </form>
-      </li>
-      
-      <li class="col-md-5 clear-fix note" ng-repeat="note in notes">
-        <div class="inner">
-          <h3 class="title">{{note.title}}</h3>
-          <div class="date">{{note.date}}</div>
-          <p class="desc">{{note.desc}}</p>
-        </div>
-      </li>
+          <input id="new-note" type="text" placeholder="Title" autofocus="autofocus" ng-model="newNote.title" class="form-control"/>
+          <textarea id="new-note" placeholder="Description" ng-model="newNote.desc" autofocus="autofocus" class="form-control"></textarea>
+          <input id="new-note" type="hidden" placeholder="Date" ng-model="newNote.date" autofocus="autofocus" class="form-control"/>
+        </form>
+      </div>
+    </li>
+    <li ng-repeat="note in notes" class="col-md-5 clear-fix note">
+      <div class="inner">
+        <h3 class="title">{{note.title}}</h3>
+        <div class="date">{{note.date}}</div>
+        <p class="desc">{{note.desc}}</p>
+      </div>
+    </li>
   </ul>
-  <button type="button" class="col-md-5 btn btn-lg btn-default" ng-click="addNote()">
-    Ajouter une note
-  </button>
+  <button type="button" ng-click="addNote()" class="col-md-5 btn btn-lg btn-default">Ajouter une note</button>
 </div>
