@@ -7482,6 +7482,11 @@ h1 {
   letter-spacing: -1px;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000323}}
+.note-list {
+  margin-top: 5em;
+}
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000326}}
 ul.notes {
   margin: 0;
@@ -7527,10 +7532,4 @@ ul.notes li.note .date {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000361}}
 ul.notes li.note p.desc {
   margin: 10px 0 10px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000366}}
-button {
-  clear: both;
-  margin-top: 2em;
 }

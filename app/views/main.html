@@ -1,23 +1,33 @@
 
-<div class="col-md-12">
+<div class="container col-md-5">
   <h1>Gestionnaire de notes</h1>
-  <ul class="notes">
-    <li class="col-md-5 clear-fix note">
-      <div class="inner">
-        <form id="note-form" ng-submit="addNote()">
-          <input id="new-note" type="text" placeholder="Title" autofocus="autofocus" ng-model="newNote.title" class="form-control"/>
-          <textarea id="new-note" placeholder="Description" ng-model="newNote.desc" autofocus="autofocus" class="form-control"></textarea>
-          <input id="new-note" type="hidden" placeholder="Date" ng-model="newNote.date" autofocus="autofocus" class="form-control"/>
-        </form>
-      </div>
-    </li>
-    <li ng-repeat="note in notes" class="col-md-5 clear-fix note">
-      <div class="inner">
-        <h3 class="title">{{note.title}}</h3>
-        <div class="date">{{note.date}}</div>
-        <p class="desc">{{note.desc}}</p>
-      </div>
-    </li>
-  </ul>
-  <button type="button" ng-click="addNote()" class="col-md-5 btn btn-lg btn-default">Ajouter une note</button>
+  <div class="note-add">
+    <ul class="notes new-note">
+      <li class="note">
+        <div class="inner">
+          <form id="note-form" ng-submit="addNote()">
+            <input id="new-note" type="text" placeholder="Title" autofocus="autofocus" ng-model="newNote.title" class="form-control"/>
+            <textarea id="new-note" placeholder="Description" ng-model="newNote.desc" autofocus="autofocus" class="form-control"></textarea>
+            <input id="new-note" type="hidden" placeholder="Date" ng-model="newNote.date" autofocus="autofocus" class="form-control"/>
+          </form>
+        </div>
+      </li>
+    </ul>
+    <div class="submit text-center">
+      <button type="button" ng-click="addNote()" class="btn btn-lg btn-default">Ajouter une note</button>
+    </div>
+  </div>
+  <hr/>
+  <div class="note-list">
+    <h3>Liste des notes</h3>
+    <ul class="notes all-notes">        
+      <li ng-repeat="note in notes" class="note">
+        <div class="inner">
+          <h3 class="title">{{note.title}}</h3>
+          <div class="date">{{note.date}}</div>
+          <p class="desc">{{note.desc}}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
