@@ -20,9 +20,7 @@ h1 {
     line-height: 1;
     letter-spacing: -1px;
 }
-.note-list {
-  margin-top: 5em;
-}
+
 ul.notes {
   margin: 0;
   margin-bottom: 2em;
@@ -40,6 +38,9 @@ ul.notes {
     }
     textarea {
       height: 100px;
+    }
+    input[type='submit'] {
+      width: 100%;
     }
   }
   
