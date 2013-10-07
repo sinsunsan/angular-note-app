@@ -7,7 +7,8 @@ angular.module('noteApp').controller('MainCtrl', function ($scope) {
     'id' : 0,
     'title' : 'Ma première note',
     'desc' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    'date' : '08/09/2013'
+    'date' : '08/09/2013',
+    'edit' : ''
   }];
   //$scope.notes = noteBase;
   
@@ -23,20 +24,6 @@ angular.module('noteApp').controller('MainCtrl', function ($scope) {
     'desc': '',
     'date': ''
   };
-  
-  $scope.addTodo = function () {
-		var newTodo = $scope.newTodo.trim();
-		if (!newTodo.length) {
-			return;
-		}
-
-		todos.push({
-			title: newTodo,
-			completed: false
-		});
-
-		$scope.newTodo = '';
-	};
   
   // Add a note when the button is clicked
   $scope.addNote = function () {
@@ -66,7 +53,21 @@ angular.module('noteApp').controller('MainCtrl', function ($scope) {
 		// We empty the new note input field
 		$scope.newNote = '';
 		
-	};  	
+	};  
+	
+	// Remove a note when the remove icon is clicked
+	$scope.removeNote = function(note) {
+	  console.log(note);
+	  console.log('remove note called');
+	  notes.splice(notes.indexOf(note), 1);
+	};
+	
+	// Remove a note when the remove icon is clicked
+	$scope.editNote = function(note) {
+	  console.log(note);
+	  console.log('edit note called');
+	  $scope.editedNote = note;
+	};
 });
 
 

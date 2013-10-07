@@ -1,42 +1,47 @@
-h1 Gestionnaire de notes
 div(class='container col-md-10')
-    div(class='note-add col-md-5')
-      ul(class='notes new-note')
-        li.note
-          .inner
-            form#note-form(ng-submit='addNote()')
+  h1(class='col-md-12') Gestionnaire de notes
+  div(class='note-add col-md-5')
+    ul(class='notes new-note')
+      li.note
+        .inner
+          form#note-form(ng-submit='addNote()')
+            input(
+              type='text',
+              placeholder='Title',
+              autofocus='autofocus',
+              class='form-control', 
+              ng-model='newNote.title')
+            
+            textarea(
+              placeholder='Description',
+              ng-model='newNote.desc',
+              autofocus='autofocus',
+              class='form-control')
+            
+            input(
+              type='hidden',
+              placeholder='Date',
+              ng-model='newNote.date',
+              autofocus='autofocus',
+              class='form-control')
+            
+            div(class="submit text-center")
               input(
-                type='text',
-                placeholder='Title',
-                autofocus='autofocus',
-                class='form-control', 
-                ng-model='newNote.title')
-                
-              textarea(
-                placeholder='Description',
-                ng-model='newNote.desc',
-                autofocus='autofocus',
-                class='form-control')
-                
-              input(
-                type='hidden',
-                placeholder='Date',
-                ng-model='newNote.date',
-                autofocus='autofocus',
-                class='form-control')
-                
-              div(class="submit text-center")
-                input(
-                  class='btn btn-lg btn-default',
-                  type='submit',
-                  value='Ajouter une note'
-                  ng-click='addNote()')
-    div(class='note-list col-md-6 col-md-offset-1')
-      ul.notes.all-notes         
-        li(class='note' ng-repeat='note in notes')
-          .inner
-            h3.title {{note.title}}
-            .date {{note.date}}
-            p.desc {{note.desc}}
+                class='btn btn-lg btn-default',
+                type='submit',
+                value='Ajouter une note'
+                ng-click='addNote()')
+  div(class='note-list col-md-6 col-md-offset-1')
+    ul.notes.all-notes         
+      li(class='note' ng-repeat='note in notes' ng-class='{completed: note.completed, editing: note == editedNote}')
+        .inner(class='{{note.edit}}')
+          div(class='actions text-right')
+            span(class='icon icon-edit', ng-click='editNote(note)')
+            span(class='icon icon-remove', ng-click='removeNote(note)')
+          h3.title {{note.title}}
+          .date {{note.date}}
+          p.desc {{note.desc}}
+            
+            
     
     

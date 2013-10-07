@@ -1,6 +1,6 @@
 
-<h1>Gestionnaire de notes</h1>
 <div class="container col-md-10">
+  <h1 class="col-md-12">Gestionnaire de notes</h1>
   <div class="note-add col-md-5">
     <ul class="notes new-note">
       <li class="note">
@@ -19,8 +19,9 @@
   </div>
   <div class="note-list col-md-6 col-md-offset-1">
     <ul class="notes all-notes">        
-      <li ng-repeat="note in notes" class="note">
-        <div class="inner">
+      <li ng-repeat="note in notes" ng-class="{completed: note.completed, editing: note == editedNote}" class="note">
+        <div class="inner {{note.edit}}">
+          <div class="actions text-right"><span ng-click="editNote(note)" class="icon icon-edit"></span><span ng-click="removeNote(note)" class="icon icon-remove"></span></div>
           <h3 class="title">{{note.title}}</h3>
           <div class="date">{{note.date}}</div>
           <p class="desc">{{note.desc}}</p>
