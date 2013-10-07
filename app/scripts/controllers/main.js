@@ -27,15 +27,12 @@ angular.module('noteApp').controller('MainCtrl', function ($scope) {
   
   // Add a note when the button is clicked
   $scope.addNote = function () {
-    console.log('new todo called');
-    console.log($scope.newNote);
     var newNote = {
       'id': 1,
       'title' : $scope.newNote.title.trim(), 
       'desc' : $scope.newNote.desc.trim(), 
       'date' : ''
     }
-    console.log(newNote);
   
     /*
 		if (!newNote.length) {
@@ -57,15 +54,11 @@ angular.module('noteApp').controller('MainCtrl', function ($scope) {
 	
 	// Remove a note when the remove icon is clicked
 	$scope.removeNote = function(note) {
-	  console.log(note);
-	  console.log('remove note called');
 	  notes.splice(notes.indexOf(note), 1);
 	};
 	
 	// Remove a note when the remove icon is clicked
 	$scope.editNote = function(note) {
-	  console.log(note);
-	  console.log('edit note called');
 	  $scope.editedNote = note;
 	};
 	
