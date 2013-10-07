@@ -68,6 +68,8 @@ angular.module('noteApp').controller('MainCtrl', function ($scope) {
 	  console.log('edit note called');
 	  $scope.editedNote = note;
 	};
+	
+
 });
 
 

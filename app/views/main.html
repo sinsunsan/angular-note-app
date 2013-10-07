@@ -22,9 +22,17 @@
       <li ng-repeat="note in notes" ng-class="{completed: note.completed, editing: note == editedNote}" class="note">
         <div class="inner {{note.edit}}">
           <div class="actions text-right"><span ng-click="editNote(note)" class="icon icon-edit"></span><span ng-click="removeNote(note)" class="icon icon-remove"></span></div>
-          <h3 class="title">{{note.title}}</h3>
-          <div class="date">{{note.date}}</div>
-          <p class="desc">{{note.desc}}</p>
+          <div class="view">
+            <h3 class="title">{{note.title}}</h3>
+            <div class="date">{{note.date}}</div>
+            <p class="desc">{{note.desc}}</p>
+          </div>
+          <div class="edit">
+            <form> 
+              <input type="text" value="{note.title}" autofocus="autofocus" ng-model="note.title" class="form-control"/>
+              <textarea type="text" value="{note.desc}" autofocus="autofocus" ng-model="note.desc" class="form-control">    </textarea>
+            </form>
+          </div>
         </div>
       </li>
     </ul>

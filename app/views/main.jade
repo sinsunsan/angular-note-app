@@ -38,9 +38,26 @@ div(class='container col-md-10')
           div(class='actions text-right')
             span(class='icon icon-edit', ng-click='editNote(note)')
             span(class='icon icon-remove', ng-click='removeNote(note)')
-          h3.title {{note.title}}
-          .date {{note.date}}
-          p.desc {{note.desc}}
+          div.view
+            h3.title {{note.title}}
+            .date {{note.date}}
+            p.desc {{note.desc}}
+          div.edit
+            form 
+              input(
+                type='text',
+                value='{note.title}',
+                autofocus='autofocus',
+                class='form-control', 
+                ng-model='note.title'
+                )
+              textarea(
+                type='text',
+                value='{note.desc}',
+                autofocus='autofocus',
+                class='form-control', 
+                ng-model='note.desc'
+              )     
             
             
     

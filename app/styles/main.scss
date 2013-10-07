@@ -19,11 +19,21 @@ body {
   .date {
     display: none;
   }
-  
-  .note.editing .desc {
-    display: block;
+  .note {
+    .edit {
+      display: none;
+    }
+    &.editing .edit {
+      display: block;
+    }
+    .view {
+      display: block;
+    }
+    &.editing .view {
+      display: none;
+    }
   }
-
+  
   .icon {
     color: $blue;
     margin-right: 1em;

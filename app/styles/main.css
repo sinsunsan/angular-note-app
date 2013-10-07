@@ -7480,54 +7480,66 @@ body {
   display: none;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000323}}
-.app .note.editing .desc {
+.app .note .edit {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000326}}
+.app .note.editing .edit {
   display: block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000329}}
+.app .note .view {
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000332}}
+.app .note.editing .view {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000340}}
 .app .icon {
   color: #1c5c76;
   margin-right: 1em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000344}}
 .app h3 {
   color: #1c5c76;
   font-size: 1.4em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000348}}
 .app h1 {
   color: #1c5c76;
   font-size: 2em;
   line-height: 1;
   letter-spacing: -1px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000355}}
 .app ul.notes {
   margin: 0;
   margin-bottom: 2em;
   margin-top: 2em;
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000363}}
 .app ul.notes form input,
 .app ul.notes form textarea {
   background-color: #ffffcc;
   margin-bottom: 1em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000366}}
 .app ul.notes form input:focus,
 .app ul.notes form textarea:focus {
   background-color: white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000370}}
 .app ul.notes form textarea {
   height: 100px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000373}}
 .app ul.notes form input[type='submit'] {
   color: #1c5c76;
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000379}}
 .app ul.notes li.note {
   background-color: #ffffcc;
   clear: both;
@@ -7537,17 +7549,17 @@ body {
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000386}}
 .app ul.notes li.note .inner {
   border-left: 1px solid #fce3b0;
   margin-left: 33px;
   padding-left: 15px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000391}}
 .app ul.notes li.note .date {
   color: #1c5c76;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/SEB\/www\/angular\/app\/styles\/main\.scss}line{font-family:\0000394}}
 .app ul.notes li.note p.desc {
   margin: 10px 0 10px;
 }
